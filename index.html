@@ -14,7 +14,10 @@
   <link href="assets/img/homeicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -42,7 +45,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Bay Area Housing Market</a></h1>
+        <h1><a href="index.html"><strong>Bay Area Housing Market</strong></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -52,12 +55,14 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#intro">Introduction</a></li>
           <li><a class="nav-link scrollto" href="#menu">Overview</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
+          <li><a class="nav-link scrollto" href="#santaclara">Santa Clara County</a></li>
+          <li><a class="nav-link scrollto" href="#sfh">Single-Family Home</a></li>
+          <li><a class="nav-link scrollto" href="#townhouse">Townhouse</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="https://johnguerra.co/classes/data_visualization_spring_2022/" class="course-btn">Course Link</a>
+      <a href="https://observablehq.com/@yeqingh/bay-area-housing-market-2021" class="link-btn">Source Code</a>
 
     </div>
   </header><!-- End Header -->
@@ -78,8 +83,7 @@
                 <h2 class="animate__animated animate__fadeInDown"><span>Bay Area</span> Overview</h2>
                 <p class="animate__animated animate__fadeInUp">
                   The growth rate of housing prices from 2020Q4 to 2021Q4 varies from region to region and from type to type. 
-                  You can find the maps showing the median sale price, its year-over-year change, median sale price per square feet,
-                  and sale-to-list ratio by zip code.
+                  You can find the maps showing the median sale price, its year-over-year change, and sale-to-list ratio by zip code.
                 </p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Read More</a>
@@ -98,7 +102,7 @@
                   a larger lot size or indoor living area have a higher increase in the sold price?
                 </p>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Read More</a>
+                  <a href="#sfh" class="btn-menu animate__animated animate__fadeInUp scrollto">Read More</a>
                 </div>
               </div>
             </div>
@@ -113,7 +117,7 @@
                   For townhouse sold in 2021Q4, is it true that newer homes and homes with lower HOA are more popular? 
                   Does year-built or monthly HOA have an significant impact on the sold price?</p>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Read More</a>
+                  <a href="#townhouse" class="btn-menu animate__animated animate__fadeInUp scrollto">Read More</a>
                 </div>
               </div>
             </div>
@@ -139,13 +143,13 @@
     <section id="intro" class="intro">
       <div class="container-fluid">
 
-        <div class="row">
+        <div class="row intro-container">
 
-        <div class="col-lg-4" style='background-image: url("assets/img/bay-area-county.jpeg");'>
+          <div class="col-lg-4">
+            <img src="assets/img/bay-area-county.jpeg" alt="bay-area-county-map">
           </div>
 
           <div class="col-lg-8 d-flex flex-column justify-content-center align-items-stretch">
-
             <div class="content">
               <h3>Introduction</h3>
               <p>
@@ -165,7 +169,7 @@
               </p>
               <p><em>Things to be explored:</em></p>
               <ul>
-                <li><i class="bx bx-check-double"></i> Discover the distribution of median sold price, unit sold price per sqft, YoY change of median sold price, and average sale-to-list ratio by zip code.</li>
+                <li><i class="bx bx-check-double"></i> Discover the distribution of median sale price, unit sold price per sqft, YoY change of median sold price, and average sale-to-list ratio by zip code.</li>
                 <li><i class="bx bx-check-double"></i> Identify if lot size or living space has an impact on the sold price of single families.</li>
                 <li><i class="bx bx-check-double"></i> Identify if year built or monthly HOA has an impact on the sold price of townhouses.</li>
               </ul>
@@ -182,68 +186,67 @@
       <div class="container">
 
         <div class="section-title">
-          <h2><span>2021Q4 Overview</span> by Zip Code</h2>
-          
+          <h2><span>Overview</span> by Zip Code</h2>
           <p>Hint: You can use the magnifier icon to search for a zip code or a city name.</p>
-        </div>
-
-        <div class="row">
-          <p>Each dot represents the median price of all sold homes of a certain home type within a zip code.</p>
-          <p>The three horizontal lines represents the median price of each home type.</p>
-          <iframe width="100%"  height="800px" frameborder="0"
-            src="https://observablehq.com/embed/@yeqingh/bay-area-housing-prices-2021q4?cells=scatterPlots">
-          </iframe>
         </div>
 
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             
             <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">Show All</li>
               <li data-filter=".filter-singlefamily">Single Family Residential</li>
               <li data-filter=".filter-townhouse">Townhouse</li>
               <li data-filter=".filter-condo">Condo</li>
             </ul>
           </div>
         </div>
+        
 
+        <h4>Median Sale Price 2021Q4</h4><br>
         <div class="row menu-container">
-          <h3>Median Sale Price & YoY change</h3>
-          <div class="col-lg-6 menu-item filter-singlefamily">
+          
+          <div class="col-lg-4 menu-item filter-singlefamily">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl20xd2mu001r14nsbcjetlzy.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
               title="Single_Family_Median_Sale_2021Q4" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-6 menu-item filter-singlefamily">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20xlkwf002515t4bv8ivwli.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Single_Family_Median_Sale_Growth_2021Q4" style="border:none;">
-            </iframe>
-          </div>
 
-          <div class="col-lg-6 menu-item filter-townhouse">
+          <div class="col-lg-4 menu-item filter-townhouse">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl20xwsv6002114oll3uwxtvl.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
               title="Townhouse_Median_Sale_2021Q4" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-6 menu-item filter-townhouse">
+          <div class="col-lg-4 menu-item filter-condo">
+            <iframe width='100%' height='550px' 
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl20zy02c004115mupi0uk5fg.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
+              title="Condo_Median_Sale_2021Q4" style="border:none;">
+            </iframe>
+          </div>
+        </div>
+
+
+          <h4>Median Sale Price 2021Q4 Year-Over-Year Change</h4><br>
+        <div class="row menu-container">
+          <div class="col-lg-4 menu-item filter-singlefamily">
+            <iframe width='100%' height='550px' 
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl20xlkwf002515t4bv8ivwli.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
+              title="Single_Family_Median_Sale_Growth_2021Q4" style="border:none;">
+            </iframe>
+          </div>
+          
+          <div class="col-lg-4 menu-item filter-townhouse">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl20z10uh00co15qjl8lv036a.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
               title="Townhouse_Median_Sale_Growth_2021Q4" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-6 menu-item filter-condo">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20zy02c004115mupi0uk5fg.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Condo_Median_Sale_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-condo">
+          <div class="col-lg-4 menu-item filter-condo">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl210ih2x001w14mjna9xj5if.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
               title="Condo_Median_Sale_Growth_2021Q4" style="border:none;">
@@ -251,141 +254,286 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <h3>Median Sale Unit Price & Average Sale-to-List Ratio</h3>
-            <p>Unit price refers to the sale price per square feet.</p>
-            <p>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</p>
-          </div>
+        
+        <div>
+          <h4>Average Sale-to-List Ratio 2021Q4</h4>
+          <p>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</p>
         </div>
 
         <div class="row menu-container">
-          <div class="col-lg-6 menu-item filter-singlefamily">
+          <div class="col-lg-4 menu-item filter-singlefamily">
             <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl1yl8ptd007r14p5xc659vol.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Single_Family_median_sale_unit_price_2021Q4" style="border:none;">
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl1yk9bhj005415o505nxn5yg.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976"
+               title="Single_Family_Sale_to_List_2021Q4" style="border:none;">
+            </iframe>
+          </div>
+          
+          <div class="col-lg-4 menu-item filter-townhouse">
+            <iframe width='100%' height='550px' 
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl20zmf3l000y14p5zc44cbfv.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
+              title="Townhouse_Sale_to_List_2021Q4" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-6 menu-item filter-townhouse">
+          <div class="col-lg-4 menu-item filter-condo">
             <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20yr6pn000314qhpjk6rixe.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Townhouse_median_sale_unit_price_2021Q4" style="border:none;">
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl210vymr001s14nsb25wzbtz.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
+              title="Condo_Sale_to_List_2021Q4" style="border:none;">
             </iframe>
           </div>
+        </div>
 
-          <div class="col-lg-6 menu-item filter-condo">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl210cdkq002f14s37lnl2wwj.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Condo_median_sale_unit_price_2021Q4" style="border:none;">
-            </iframe>
-          </div>
 
         </div>
 
       </div>
-    </section><!-- End Menu Section -->
+    </section><!-- End Overview Section -->
 
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
+    <!-- ======= Santa Clara Section ======= -->
+    <section id="santaclara" class="menu">
       <div class="container">
 
         <div class="section-title">
-          <h2>Organize Your <span>Events</span> in our Restaurant</h2>
+          <h2><span>Santa Clara County</span></h2>
         </div>
 
-        <div class="events-slider swiper">
-          <div class="swiper-wrapper">
+        <div class="row">
+          <iframe width="100%" height="580" frameborder="0"
+            src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+homeTypeSelectedForYearBar%2Cviewof+citySelectedForYearBar%2Cviewof+yearBars">
+          </iframe>
+          <p style="padding-top:30px;"><em>Findings: </em>For Single Family Residential, there is a peak in the construction from the 1950s to 1970s in most cities 
+            except for Morgan Hill and Gilroy. If you are a buyer who prefers single families built after 2000, 
+            there are not many listings in the market. However, if you consider purchasing townhouses or condos, 
+            many of them are built after 2000.
+          </p>
+        </div>
 
-            <div class="swiper-slide">
-              <div class="row event-item">
-                <div class="col-lg-6">
-                  <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Birthday Parties</h3>
-                  <div class="price">
-                    <p><span>$189</span></p>
-                  </div>
-                  <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="row event-item">
-                <div class="col-lg-6">
-                  <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Private Parties</h3>
-                  <div class="price">
-                    <p><span>$290</span></p>
-                  </div>
-                  <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="row event-item">
-                <div class="col-lg-6">
-                  <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Custom Parties</h3>
-                  <div class="price">
-                    <p><span>$99</span></p>
-                  </div>
-                  <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row menu-container">
+          <div class="col-lg-8 menu-item">
+            <iframe width='100%' height='550px' 
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl26kioi4001515l435or6qsi.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#10/37.3198/-121.9135" 
+              title="Single_Family_Year_Built" style="border:none;">
+            </iframe>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="col-lg-4 menu-item">
+            <p>
+              <em>Year Built: </em>
+              <span style="color:#fc8d62;"> Before 1960 </span>
+              <span style="color:#839cd8;"> 1960 - 1989 </span>
+              <span style="color:#e78ac3;"> After 1990 </span>
+            </p>
+            <ul>
+              <li>There are not many homes sold on the route of San Jose International Airport(mainly because of the transportation noise), so we can find a large blank area to the northwest of the airport.</li>
+              <li>Properties built before 1960, and between 1960 and 1989 are dominant in the market, especially in silicon valley.</li>
+              <li>There are clusters of violet dots on the map. These are mainly townhouses/condos sold in the same community. This is consistent with the findings from the bar chart, i.e. townhouses and condos are newer than single families overall.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <iframe width="100%" height="568" frameborder="0"
+            src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+homeTypeSelectedForPriceBar%2Cviewof+priceBars">
+          </iframe>
+          <p>
+            <em>Findings: </em>It's surprising that the Condo type has a significant price drop from 2020Q4 to 2021Q4 in half of the cities, 
+            while single families see an increase in all cities and townhouses see an increase in most cities.
+          </p>
+        </div>
+
+        <div class="row menu-container">
+          <div class="col-lg-8 menu-item">
+            <iframe width='100%' height='550px' 
+              src="https://api.mapbox.com/styles/v1/yeqingh/cl26j6qa6008214nspjf0r3f5.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#10/37.3198/-121.9135" 
+              title="Streets" style="border:none;">
+            </iframe>
+          </div>
+
+          <div class="col-lg-4 menu-item">
+            <p>
+              <em>Sale Price: </em>
+              <span style="color:#43c60c;"> &lt 1 Million </span>
+              <span style="color:#f48115;"> 1 - 2 Million </span>
+              <span style="color:#f10909;"> &gt 2 Million </span>
+            </p>
+            <ul>
+              <li>Palo Alto, Los Altos, Cupertino, Saratoga and Monte Sereno are the most expensive areas in Santa Clara County.</li>
+              <li>East San Jose is the most affordable area.</li>
+            </ul>
+          </div>
         </div>
 
       </div>
-    </section><!-- End Events Section -->
+    </section><!-- End Santa Clara Section -->
 
-      <!-- ======= Conclusion Section ======= -->
+    <!-- ======= SFH Section ======= -->
+    <section id="sfh" class="events">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Single Family Residential</h2>
+        </div>
+
+        <div class="row event-item">
+          <div class="col-lg-8">
+            <iframe width="100%" height="500" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForQ4%2Cviewof+sfhPriceGrid">
+            </iframe>          
+          </div>
+
+          <div class="col-lg-4 pt-4 pt-lg-0 content">
+            <h3>Median Sale Price</h3>
+              <p class="fst-italic">
+                <strong>Note: </strong>Each grid represents a home category. 
+                   Single-family homes that have the same lot size range and living space range will fall into the same grid.
+              </p>
+              <p>
+                These charts are focused on the distribution of lot sizes and living spaces. We can tell that the median prices in 2021Q4 increase a lot because
+                the red colors become darker. However, it's difficult to quantify the increase by just comparing the saturation of colors side by side.
+              </p>
+          </div>   
+        </div><!-- End the first chart -->
+
+        <div class="row event-item">
+          <div class="content">
+            <h3>Linear Regression</h3>
+            <p>
+              <strong>R-squared</strong> is the coefficient of determination. It has a value between 0 to 1 and measures the total variance explained by the model. 
+              The closer R-squared is to 1, the more it indicates that the x-axis variable can explain the y-axis variable.
+            </p>
+            <p>
+              From the linear regressions, we can tell that R-squared is too low for lot size. 
+              It means that lot size has little explanation over the variance of the sold price. 
+              Living space seems to be a better independent variable(R-squared is between 0.5 and 0.8 for most cities). 
+            </p>
+          </div>
+          
+          <div class="col-lg-6">
+            <iframe width="100%" height="400" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+regressionLivingSpace">
+            </iframe>
+          </div> 
+
+          <div class="col-lg-6">
+            <iframe width="100%" height="400" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=regressionLotSize">
+            </iframe>
+          </div> 
+
+          
+        </div><!-- End the second chart -->
+
+        <div class="row event-item">
+          <div class="col-lg-6">
+            <iframe width="100%" height="538" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+sfhSlopeChart">
+            </iframe>
+          </div>
+
+          <div class="col-lg-6 pt-more">
+            <h3>Group the Homes by Living Space</h3>
+              <p class="fst-italic">
+                <strong>Note: </strong>You can switch to other cities from the drop-down menu above.
+              </p>
+              <p>
+                For cities like Campbell, San Jose, and Sunnyvale, we can see that the groups with a larger living space has a bigger increase in the median sold price. 
+              </p>
+              <p>
+                However, keep in mind that this only reflects the absolute change in sold price, and do not show the percentage change in price.
+              </p>
+          </div>   
+        </div><!-- End the third chart -->
+
+
+      </div>
+    </section><!-- End SFH Section -->
+
+    <!-- ======= Townhouse Section ======= -->
+    <section id="townhouse" class="intro">
+      <div class="intro-container">
+        <h3>Does monthly HOA or year-built have a significant impact on the sold price of townhouses?</h3>
+        
+        <div class="row">
+          <p>
+            Analyze the median sold price increase of each city and check if the increase has any correlation with:
+            <li>year-built(older townhouses are less favorable)</li>
+            <li>monthly HOA (higher HOA makes the homes less desired)</li>
+          </p>
+        </div>
+
+        <div class="row">
+          <p>
+            <em>Note: You can drag and select a sliding window on any of the axes shown above. 
+            You can remove the window by clicking anywhere else on the selected axis. 
+            You can also draw multiple sliding windows(one for each axis) for crossfilter.</em>
+          </p>
+
+          <iframe width="100%" height="744" frameborder="0"
+            src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForTownhouse%2Cviewof+parallelLegend%2Cviewof+parallelChartTownhouse">
+          </iframe>
+        </div>
+
+        <div class="row">
+          <p style="margin-top:10px;">
+            <em>Findings: </em><strong>The interwoven paths between hoa and price indicate that 
+            there is no correlation between monthly HOA and townhouse sold price.</strong> There are more parallel 
+            paths between price and yearBuilt, which means newer townhouses are usually sold at higher prices. 
+            Similarly, paths are parallel between yearBuilt and sqft, indicating that newer townhouses are often 
+            built with a larger living space.
+          </p>
+          <p>
+            For this reason, I decided to give up my previous assumption that HOA may have an impact on townhouse sold price.
+            I only focused on year built and used a slop graph to see if newer homes have a bigger price increase from 2020Q4 to 2021Q4.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <iframe width="100%" height="538" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+townhouseSlopeChart">
+            </iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <p>
+              <em>Findings: </em>Except for Campbell, all the other cities share the same trends:
+              <ol>
+                <li>Newer homes have a higher median sold price both in 2020Q4 and 2021Q4.</li>
+                <li>Newer homes have a bigger slope compared with homes that are built before 2000, 
+                which means newer homes have a higher increase in median sold price.</li>
+              </ol>
+            </p>
+            <p>
+              <em>Note: You can switch to other cities from the drop-down menu above.</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <iframe width="100%" height="500" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+townhouseQuatileChart">
+            </iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <p>
+              Since the median price does not reflect all the information, I added another chart to show q1 and q3
+              (25% quartile and 75% quartile of all data points) of the sold price and compared the change from 2020Q4 to 2021Q4. 
+              <em>Findings: </em>
+              <ol>
+                <li>The distance between q1 and q3 is large for most cities and year groups, which means that the middle 50% of sold prices have a wide range.</li>
+                <li>There is an obvious trend of upward shifting within each year group. If you choose San Jose, for townhouses built between 2010 and 2021, 
+                even the 25% quartile sold price in 2021Q4 is higher than the 75% quartile sold price in 2020Q4.</li>
+              </ol>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Townhouse Section -->
+
+    <!-- ======= Conclusion Section ======= -->
     <section id="conclusion" class="conclusion">
       <div class="container">
 
@@ -406,7 +554,7 @@
               <h4>Statistics by Zipcode</h4>
               <p>
                 The project has provided some informative charts to show the distribution of sold prices and other characteristics. 
-                The patterns vary a lot among different home types.
+                The patterns vary a lot among different home types in different cities.
               </p>
             </div>
           </div>
@@ -416,7 +564,7 @@
               <span>02</span>
               <h4>Single Family Residential</h4>
               <p>
-                Lot size is not a significant factor. Indoor living space is a significant factor for some cities. 
+                Lot size is not a significant factor for home appreciation. Indoor living space is a significant factor for some cities. 
                 Homes with larger living spaces have a higher increase of sold price from 2020Q4 to 2021Q4.
               </p>
             </div>
@@ -427,8 +575,8 @@
               <span>03</span>
               <h4>Townhouse</h4>
               <p>
-                Monthly HOA is not a significant factor. Year-built is a significant factor for most cities. The newer homes
-                the home is, the higher the prices increases from 2020Q4 to 2021Q4.
+                Monthly HOA is not a significant factor for home appreciation. Year-built is a significant factor for most cities. 
+                The newer the homes are, the higher the prices increases from 2020Q4 to 2021Q4.
               </p>
             </div>
           </div>
