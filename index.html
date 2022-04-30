@@ -46,8 +46,6 @@
 
       <div class="logo me-auto">
         <h1><a href="index.html"><strong>Bay Area Housing Market</strong></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -62,7 +60,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="https://observablehq.com/@yeqingh/bay-area-housing-market-2021" class="link-btn">Source Code</a>
+      <a href="https://observablehq.com/@yeqingh/bay-area-housing-market-2021" target="_blank" class="link-btn">Source Code</a>
 
     </div>
   </header><!-- End Header -->
@@ -187,12 +185,11 @@
 
         <div class="section-title">
           <h2><span>Overview</span> by Zip Code</h2>
-          <p>Hint: You can use the magnifier icon to search for a zip code or a city name.</p>
+          <p>Hint: For the interactive version, please go to the <a href="https://observablehq.com/@yeqingh/bay-area-housing-prices-2021q4">observable notebook</a></p>
         </div>
 
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
-            
             <ul id="menu-flters">
               <li data-filter="*" class="filter-active">Show All</li>
               <li data-filter=".filter-singlefamily">Single Family Residential</li>
@@ -202,89 +199,46 @@
           </div>
         </div>
         
-
-        <h4>Median Sale Price 2021Q4</h4><br>
         <div class="row menu-container">
-          
-          <div class="col-lg-4 menu-item filter-singlefamily">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20xd2mu001r14nsbcjetlzy.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Single_Family_Median_Sale_2021Q4" style="border:none;">
-            </iframe>
+          <div class="col-lg-8 menu-item filter-singlefamily">
+            <img src="assets/img/maps/median_sfh.png" alt="Single_Family_Median_Sale_2021Q4">
           </div>
 
-
-          <div class="col-lg-4 menu-item filter-townhouse">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20xwsv6002114oll3uwxtvl.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Townhouse_Median_Sale_2021Q4" style="border:none;">
-            </iframe>
+          <div class="col-lg-8 menu-item filter-townhouse">
+            <img src="assets/img/maps/median_townhouse.png" alt="Townhouse_Median_Sale_2021Q4">
           </div>
 
-          <div class="col-lg-4 menu-item filter-condo">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20zy02c004115mupi0uk5fg.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Condo_Median_Sale_2021Q4" style="border:none;">
-            </iframe>
+          <div class="col-lg-8 menu-item filter-condo">
+            <img src="assets/img/maps/median_condo.png" alt="Condo_Median_Sale_2021Q4">
           </div>
+
+          <div class="col-lg-8 menu-item filter-singlefamily">
+            <img src="assets/img/maps/yoy_sfh.png" alt="Single_Family_Median_Sale_Growth_2021Q4">
+          </div>
+
+          <div class="col-lg-8 menu-item filter-townhouse">
+            <img src="assets/img/maps/yoy_townhouse.png" alt="Townhouse_Median_Sale_Growth_2021Q4">
+          </div>
+
+          <div class="col-lg-8 menu-item filter-condo">
+            <img src="assets/img/maps/yoy_condo.png" alt="Condo_Median_Sale_Growth_2021Q4">
+          </div>
+
+          <div class="col-lg-8 menu-item filter-singlefamily">
+            <img src="assets/img/maps/ratio_sfh.png" alt="Single_Family_Sale_to_List_2021Q4">
+          </div>
+
+          <div class="col-lg-8 menu-item filter-townhouse">
+            <img src="assets/img/maps/ratio_townhouse.png" alt="Townhouse_Sale_to_List_2021Q4">
+          </div>
+
+          <div class="col-lg-8 menu-item filter-condo">
+            <img src="assets/img/maps/ratio_condo.png" alt="Condo_Sale_to_List_2021Q4">
+          </div>
+
         </div>
 
-
-          <h4>Median Sale Price 2021Q4 Year-Over-Year Change</h4><br>
-        <div class="row menu-container">
-          <div class="col-lg-4 menu-item filter-singlefamily">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20xlkwf002515t4bv8ivwli.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Single_Family_Median_Sale_Growth_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-          
-          <div class="col-lg-4 menu-item filter-townhouse">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20z10uh00co15qjl8lv036a.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Townhouse_Median_Sale_Growth_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-
-          <div class="col-lg-4 menu-item filter-condo">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl210ih2x001w14mjna9xj5if.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Condo_Median_Sale_Growth_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-        </div>
-
-        
-        <div>
-          <h4>Average Sale-to-List Ratio 2021Q4</h4>
-          <p>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</p>
-        </div>
-
-        <div class="row menu-container">
-          <div class="col-lg-4 menu-item filter-singlefamily">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl1yk9bhj005415o505nxn5yg.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976"
-               title="Single_Family_Sale_to_List_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-          
-          <div class="col-lg-4 menu-item filter-townhouse">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl20zmf3l000y14p5zc44cbfv.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Townhouse_Sale_to_List_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-
-          <div class="col-lg-4 menu-item filter-condo">
-            <iframe width='100%' height='550px' 
-              src="https://api.mapbox.com/styles/v1/yeqingh/cl210vymr001s14nsb25wzbtz.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#8.7/37.5084/-122.0976" 
-              title="Condo_Sale_to_List_2021Q4" style="border:none;">
-            </iframe>
-          </div>
-        </div>
-
-
-        </div>
+        <p><em>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</em></p>
 
       </div>
     </section><!-- End Overview Section -->
@@ -301,7 +255,7 @@
           <iframe width="100%" height="580" frameborder="0"
             src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+homeTypeSelectedForYearBar%2Cviewof+citySelectedForYearBar%2Cviewof+yearBars">
           </iframe>
-          <p style="padding-top:30px;"><em>Findings: </em>For Single Family Residential, there is a peak in the construction from the 1950s to 1970s in most cities 
+          <p style="padding-top:20px;"><em>Findings: </em>For Single Family Residential, there is a peak in the construction from the 1950s to 1970s in most cities 
             except for Morgan Hill and Gilroy. If you are a buyer who prefers single families built after 2000, 
             there are not many listings in the market. However, if you consider purchasing townhouses or condos, 
             many of them are built after 2000.
@@ -335,7 +289,7 @@
           <iframe width="100%" height="568" frameborder="0"
             src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+homeTypeSelectedForPriceBar%2Cviewof+priceBars">
           </iframe>
-          <p>
+          <p style="padding-top:20px;">
             <em>Findings: </em>It's surprising that the Condo type has a significant price drop from 2020Q4 to 2021Q4 in half of the cities, 
             while single families see an increase in all cities and townhouses see an increase in most cities.
           </p>

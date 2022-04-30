@@ -14,7 +14,7 @@ Backgroud images:
 - Painted Ladies San Francisco photo by [Fran](https://unsplash.com/photos/0WCwFcAnSLw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) on Unsplash
 - Overhead photo of Single Family Residential by [Tom Rumble](https://unsplash.com/photos/7lvzopTxjOU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) on Unsplashh
 - Townhouse photo by [Simi Iluyomade](https://unsplash.com/photos/MLbnzuPaKVk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) on Unsplash
-- Brown House Photo by [Rowan Heuvel](https://unsplash.com/photos/bjej8BY1JYQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) on Unsplash
+- Brown house photo by [Rowan Heuvel](https://unsplash.com/photos/bjej8BY1JYQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) on Unsplash
 
-Website Icon:
-Home icon created by Freepik on [Flaticon](https://www.flaticon.com/free-icons/home)
+Website Icon:  
+Icon created by ultimatearm on [Flaticon](https://www.flaticon.com/free-icons/stock)
