@@ -17,7 +17,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -139,21 +138,21 @@
 
     <!-- ======= Introduction Section ======= -->
     <section id="intro" class="intro">
-      <div class="container-fluid">
 
         <div class="row intro-container">
 
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <img src="assets/img/bay-area-county.jpeg" alt="bay-area-county-map">
           </div>
 
-          <div class="col-lg-8 d-flex flex-column justify-content-center align-items-stretch">
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
             <div class="content">
               <h3>Introduction</h3>
               <p>
-                The housing price in 2021 has a dramatic increase compared with the previous year. The market still shows no signs of slowing down. 
-                There are mixed factors that contribute to the price increase over the past year. The factors include the imbalance between supply and demand, 
-                a historically low mortgage rate, a high inflation rate, the volatile stock market, and so on.
+                The housing price in 2021 has a dramatic increase compared with the previous year. 
+                There are mixed factors that contribute to the price increase over the past year. 
+                The factors include the imbalance between supply and demand, a historically low mortgage rate, 
+                a high inflation rate, the volatile stock market, and so on.
               </p>
               <p>
                 My goal for this project is to investigate what factors have a greater impact on home appreciation. In other words, <strong>which types of homes 
@@ -162,12 +161,11 @@
               </p>
               <p>
                 Because sales volume has a strong seasonal pattern, using the data of a single month may not reflect the actual trends. I used Redfin data from 2020Q4 to 2021Q4. 
-                The regions include counties in the Bay Area except for the counties in the North Bay: Alameda, Santa Clara, Contra Costa, San Mateo, and San Francisco. 
-                Single-family homes, townhouses, and condos will be discussed separately.
+                The regions include counties in the Bay Area except for the counties in the North Bay: Contra Costa, Alameda, Santa Clara, San Mateo, and San Francisco. 
+                Single-family homes, townhouses, and condos will be discussed separately. Things to be explored:
               </p>
-              <p><em>Things to be explored:</em></p>
               <ul>
-                <li><i class="bx bx-check-double"></i> Discover the distribution of median sale price, unit sold price per sqft, YoY change of median sold price, and average sale-to-list ratio by zip code.</li>
+                <li><i class="bx bx-check-double"></i> Discover the distribution of median sale price, YoY change of median sold price, and average sale-to-list ratio by zip code.</li>
                 <li><i class="bx bx-check-double"></i> Identify if lot size or living space has an impact on the sold price of single families.</li>
                 <li><i class="bx bx-check-double"></i> Identify if year built or monthly HOA has an impact on the sold price of townhouses.</li>
               </ul>
@@ -176,13 +174,11 @@
 
         </div>
 
-      </div>
     </section><!-- End Introduction Section -->
 
     <!-- ======= Overview Section ======= -->
     <section id="menu" class="menu">
       <div class="container">
-
         <div class="section-title">
           <h2><span>Overview</span> by Zip Code</h2>
           <p>Hint: For the interactive version, please go to the <a href="https://observablehq.com/@yeqingh/bay-area-housing-prices-2021q4">observable notebook</a></p>
@@ -190,7 +186,7 @@
 
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
+            <ul id="menu-filters">
               <li data-filter="*" class="filter-active">Show All</li>
               <li data-filter=".filter-singlefamily">Single Family Residential</li>
               <li data-filter=".filter-townhouse">Townhouse</li>
@@ -238,8 +234,15 @@
 
         </div>
 
-        <p><em>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</em></p>
-
+        <p class="menu-finding"><em>Sale-to-list ratio is the the final sale price divided by the list price. It indicates the competitiveness of the bidding.</em></p>
+        <div class="menu-finding">
+          <p>1) For the median sale price, the colors become lighter as we move on from single-family residential to townhouses and then to condos. 
+            This makes sense because single-family residential is more expensive.</p>
+          <p>2) For the average sale-to-list ratio, the maps have similar patterns. Buyers of the single-family residential are willing to pay more compared with 
+            the buyers of other home types. The map of the single-family residential has more areas with the darker purple.</p>
+          <p>3) For the year-over-year change, it is surprising that many regions have a price drop for condos from 2020Q4 
+            to 2021Q4(with the red color), and townhouse and single-family residential don't have such a trend.</p>
+        </div>
       </div>
     </section><!-- End Overview Section -->
 
@@ -262,15 +265,15 @@
           </p>
         </div>
 
-        <div class="row menu-container">
-          <div class="col-lg-8 menu-item">
+        <div class="row">
+          <div class="col-lg-8">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl26kioi4001515l435or6qsi.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#10/37.3198/-121.9135" 
               title="Single_Family_Year_Built" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-4 menu-item">
+          <div class="col-lg-4">
             <p>
               <em>Year Built: </em>
               <span style="color:#fc8d62;"> Before 1960 </span>
@@ -295,15 +298,15 @@
           </p>
         </div>
 
-        <div class="row menu-container">
-          <div class="col-lg-8 menu-item">
+        <div class="row">
+          <div class="col-lg-8">
             <iframe width='100%' height='550px' 
               src="https://api.mapbox.com/styles/v1/yeqingh/cl26j6qa6008214nspjf0r3f5.html?title=false&access_token=pk.eyJ1IjoieWVxaW5naCIsImEiOiJjbDF2Y2J2encyZ2xzM2NtdGJleDlscGppIn0.F94vJZwWDx7xjq9V9S3XHA&zoomwheel=false#10/37.3198/-121.9135" 
               title="Streets" style="border:none;">
             </iframe>
           </div>
 
-          <div class="col-lg-4 menu-item">
+          <div class="col-lg-4">
             <p>
               <em>Sale Price: </em>
               <span style="color:#43c60c;"> &lt 1 Million </span>
@@ -335,7 +338,7 @@
             </iframe>          
           </div>
 
-          <div class="col-lg-4 pt-4 pt-lg-0 content">
+          <div class="col-lg-4 pt-4 pt-lg-0 content pt-more">
             <h3>Median Sale Price</h3>
               <p class="fst-italic">
                 <strong>Note: </strong>Each grid represents a home category. 
@@ -349,8 +352,20 @@
         </div><!-- End the first chart -->
 
         <div class="row event-item">
-          <div class="content">
+          
+          <div class="col-lg-8">
+            <iframe width="100%" height="850" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForLinearRegression%2Cviewof+regressionLivingSpace%2Cviewof+regressionLotSize">
+            </iframe>
+          </div> 
+
+          <div class="col-lg-4 pt-more">
             <h3>Linear Regression</h3>
+            <p>
+              <em>Findings:</em> For most cities, the regression line in 2021(the purple one) has an upward shift compared with the regression line in 2020(the green one). 
+              This means that for any given x, y becomes larger in 2021. In other words, buyers would need to pay more in order to buy a house with the same living space 
+              or the same lot size. This finding is consistent with what is shown in the heatmap.
+            </p>
             <p>
               <strong>R-squared</strong> is the coefficient of determination. It has a value between 0 to 1 and measures the total variance explained by the model. 
               The closer R-squared is to 1, the more it indicates that the x-axis variable can explain the y-axis variable.
@@ -360,44 +375,33 @@
               It means that lot size has little explanation over the variance of the sold price. 
               Living space seems to be a better independent variable(R-squared is between 0.5 and 0.8 for most cities). 
             </p>
-          </div>
-          
-          <div class="col-lg-6">
-            <iframe width="100%" height="400" frameborder="0"
-              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+regressionLivingSpace">
-            </iframe>
-          </div> 
-
-          <div class="col-lg-6">
-            <iframe width="100%" height="400" frameborder="0"
-              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=regressionLotSize">
-            </iframe>
+            <p>
+              <em>Note: You can switch to other cities from the drop-down menu.</em>
+            </p>
           </div> 
 
           
         </div><!-- End the second chart -->
 
         <div class="row event-item">
-          <div class="col-lg-6">
-            <iframe width="100%" height="538" frameborder="0"
-              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+sfhSlopeChart">
+          <div class="col-lg-8">
+            <iframe width="100%" height="581" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForSlopeSFH%2Cviewof+sfhSlopeChart">
             </iframe>
           </div>
 
-          <div class="col-lg-6 pt-more">
+          <div class="col-lg-4 pt-more">
             <h3>Group the Homes by Living Space</h3>
-              <p class="fst-italic">
-                <strong>Note: </strong>You can switch to other cities from the drop-down menu above.
-              </p>
               <p>
-                For cities like Campbell, San Jose, and Sunnyvale, we can see that the groups with a larger living space has a bigger increase in the median sold price. 
+                For cities like Campbell, San Jose, and Sunnyvale, we can see that the groups with a larger living space 
+                has a bigger increase in the median sold price. 
               </p>
               <p>
                 However, keep in mind that this only reflects the absolute change in sold price, and do not show the percentage change in price.
               </p>
+              <p><em>Note: You can switch to other cities from the drop-down menu.</em></p>
           </div>   
         </div><!-- End the third chart -->
-
 
       </div>
     </section><!-- End SFH Section -->
@@ -443,8 +447,8 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <iframe width="100%" height="538" frameborder="0"
-              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+townhouseSlopeChart">
+            <iframe width="100%" height="581" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForSlopeTownhouse%2Cviewof+townhouseSlopeChart">
             </iframe>
           </div>
 
@@ -458,15 +462,15 @@
               </ol>
             </p>
             <p>
-              <em>Note: You can switch to other cities from the drop-down menu above.</em>
+              <em>Note: You can switch to other cities from the drop-down menu.</em>
             </p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
-            <iframe width="100%" height="500" frameborder="0"
-              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+townhouseQuatileChart">
+            <iframe width="100%" height="450" frameborder="0"
+              src="https://observablehq.com/embed/@yeqingh/bay-area-housing-market-2021?cells=viewof+citySelectedForQuartile%2Cviewof+townhouseQuartileChart">
             </iframe>
           </div>
 
@@ -480,6 +484,9 @@
                 <li>There is an obvious trend of upward shifting within each year group. If you choose San Jose, for townhouses built between 2010 and 2021, 
                 even the 25% quartile sold price in 2021Q4 is higher than the 75% quartile sold price in 2020Q4.</li>
               </ol>
+            </p>
+            <p>
+              <em>Note: You can switch to other cities from the drop-down menu.</em>
             </p>
           </div>
         </div>
@@ -547,7 +554,7 @@
       <h3>Bay Area Housing Market</h3>
       <p>
         Final Project for <a href="https://johnguerra.co/classes/data_visualization_spring_2022/">CS 7295: Data Visualization</a> Spring 2022. 
-        Review the <a href="https://observablehq.com/@yeqingh/bay-area-housing-prices-2021q4">source code</a> in the Observable Notebook.
+        Data source: <a href="https://www.redfin.com/news/data-center/">Redfin Data Center</a>
       </p>
       <div class="copyright">
         &copy; Copyright <strong><span>Yeqing</span></strong>. All Rights Reserved
